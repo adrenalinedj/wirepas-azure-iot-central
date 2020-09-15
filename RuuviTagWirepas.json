@@ -1,0 +1,162 @@
+{
+  "@id": "urn:wirepascentral:RuuviTagWirepas_3zt:1",
+  "@type": "CapabilityModel",
+  "implements": [
+    {
+      "@id": "urn:wirepascentral:RuuviTagWirepas_3zt:0bxlh4djk:1",
+      "@type": "InterfaceInstance",
+      "displayName": {
+        "en": "Interface"
+      },
+      "name": "RuuviTagWirepas_4i8",
+      "schema": {
+        "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:1",
+        "@type": "Interface",
+        "displayName": {
+          "en": "Interface"
+        },
+        "contents": [
+          {
+            "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:temperature:1",
+            "@type": [
+              "Telemetry",
+              "SemanticType/Temperature"
+            ],
+            "comment": "Temperature in °C",
+            "displayName": {
+              "en": "Temperature"
+            },
+            "name": "temperature",
+            "schema": "float",
+            "unit": "celsius"
+          },
+          {
+            "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:humidity:1",
+            "@type": [
+              "Telemetry",
+              "SemanticType/Humidity"
+            ],
+            "comment": "Humidity in %age",
+            "displayName": {
+              "en": "Humidity"
+            },
+            "name": "humidity",
+            "schema": "float",
+            "unit": "percent"
+          },
+          {
+            "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:pressure:1",
+            "@type": [
+              "Telemetry",
+              "SemanticType/Pressure"
+            ],
+            "comment": "Atmosphric pressure in kPa",
+            "displayName": {
+              "en": "Pressure"
+            },
+            "name": "pressure",
+            "schema": "float",
+            "unit": "kiloPascal"
+          },
+          {
+            "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:shockState:1",
+            "@type": [
+              "Telemetry",
+              "SemanticType/State"
+            ],
+            "comment": "Represents the previous and the current state.",
+            "displayName": {
+              "en": "ShockState"
+            },
+            "name": "shockState",
+            "schema": {
+              "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:shockState:p_uzc71pw:1",
+              "@type": "Enum",
+              "valueSchema": "integer",
+              "enumValues": [
+                {
+                  "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:shockState:p_uzc71pw:StationaryStationary:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "StationaryStationary"
+                  },
+                  "enumValue": 0,
+                  "name": "StationaryStationary"
+                },
+                {
+                  "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:shockState:p_uzc71pw:StationaryMoving:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "StationaryMoving"
+                  },
+                  "enumValue": 1,
+                  "name": "StationaryMoving"
+                },
+                {
+                  "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:shockState:p_uzc71pw:MovingStationary:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "MovingStationary"
+                  },
+                  "enumValue": 2,
+                  "name": "MovingStationary"
+                },
+                {
+                  "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:shockState:p_uzc71pw:MovingMoving:1",
+                  "@type": "EnumValue",
+                  "displayName": {
+                    "en": "MovingMoving"
+                  },
+                  "enumValue": 3,
+                  "name": "MovingMoving"
+                }
+              ]
+            }
+          },
+          {
+            "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:moveDuration:1",
+            "@type": "Telemetry",
+            "comment": "Move duration in seconds",
+            "displayName": {
+              "en": "MoveDuration"
+            },
+            "name": "moveDuration",
+            "displayUnit": {
+              "en": "sec"
+            },
+            "schema": "duration"
+          },
+          {
+            "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:moveCount:1",
+            "@type": "Telemetry",
+            "comment": "Move count ",
+            "displayName": {
+              "en": "MoveCount"
+            },
+            "name": "moveCount",
+            "schema": "integer"
+          },
+          {
+            "@id": "urn:wirepascentral:RuuviTagWirepas_4i8:accelerationState:1",
+            "@type": [
+              "Telemetry",
+              "SemanticType/Acceleration"
+            ],
+            "comment": "Acceleration value is the MSB of a 12 bits value and the result is in mG.",
+            "displayName": {
+              "en": "AccelerationState"
+            },
+            "name": "accelerationState",
+            "schema": "vector"
+          }
+        ]
+      }
+    }
+  ],
+  "displayName": {
+    "en": "RuuviTag Wirepas"
+  },
+  "@context": [
+    "http://azureiot.com/v1/contexts/IoTModel.json"
+  ]
+}
